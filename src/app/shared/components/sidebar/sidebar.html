@@ -1,0 +1,82 @@
+<div class="sidebar">
+    <!-- Profile Section -->
+     <button class="icon-button">
+        <img src="assets/icons/unfold_less.svg" alt="unfold">
+     </button>
+    <div class="profile">
+        <!-- <div class="avatar">{{ user.initials }}</div> -->
+        <span class="AvatarRoot" rdxAvatarRoot>
+            <img class="AvatarImage" rdxAvatarImage
+                src="https://images.unsplash.com/photo-14926jkljlksg33423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
+                alt="Colm Tuite" />
+            <span class="AvatarFallback" rdxAvatarFallback rdxDelayMs="600">{{user.initials }}</span>
+        </span>
+        <div class="info">
+            <div class="name">{{ user.name }}</div>
+            <div class="role">{{ user.role }}</div>
+        </div>
+    </div>
+
+    <!-- MAIN MENU -->
+    <nav class="nav-section">
+        @for (item of topMenu; track item.path) {
+        <a class="nav-item" [routerLink]="item.path" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">
+            <!-- <i class="icon">★</i> -->
+            <img class="icon" [src]="'assets/icons/' + item.icon" [alt]="item.icon" />
+            <span>{{ item.label }}</span>
+        </a>
+        }
+    </nav>
+
+
+    <hr class="divider" />
+
+    <!-- MAIN MENU -->
+    <nav class="nav-section">
+        @for (item of menu; track item.path) {
+        <a class="nav-item" [routerLink]="item.path" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">
+            <!-- <i class="icon">★</i> -->
+            <img class="icon" [src]="'assets/icons/' + item.icon" [alt]="item.icon" />
+            <span>{{ item.label }}</span>
+        </a>
+        }
+    </nav>
+
+
+    <hr class="divider" />
+
+    <!-- ADMIN SECTION -->
+    <div class="section-title">ADMINISTRATION</div>
+    <nav class="nav-section">
+        @for (item of adminMenu; track item.path) {
+        <a class="nav-item" [routerLink]="item.path" routerLinkActive="active">
+            <img class="icon" [src]="'assets/icons/' + item.icon" [alt]="item.icon" />
+            <span>{{ item.label }}</span>
+        </a>
+        }
+    </nav>
+
+
+    <hr class="divider" />
+
+    <!-- HELP SECTION -->
+    <div class="section-title">HELP</div>
+    <nav class="nav-section">
+        @for (item of helpMenu; track item.path) {
+        <a class="nav-item" [routerLink]="item.path" routerLinkActive="active">
+            <img class="icon" [src]="'assets/icons/' + item.icon" [alt]="item.icon" />
+            <span>{{ item.label }}</span>
+        </a>
+        }
+    </nav>
+
+    <hr class="divider" />
+
+    <!-- LOGOUT -->
+    <a class="nav-item" (click)="logout()">
+        <img class="icon" src="assets/icons/logout.svg" alt="logout.svg" />
+        <span>Logout</span>
+    </a>
+</div>
