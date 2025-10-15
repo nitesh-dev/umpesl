@@ -4,14 +4,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   font-family: 'Helvetica Neue';
 
   border: none;
   outline: none;
   border-radius: 6px;
   // transition: all 0.3s ease;
-
 
   &.full-width {
     width: 100%;
@@ -23,8 +22,8 @@
     padding: 0 10px;
 
     svg {
-      width: 12px;
-      height: 12px;
+      width: auto;
+      height: 20px;
     }
   }
 
@@ -34,8 +33,8 @@
     padding: 0 12px;
 
     svg {
-      width: 13px;
-      height: 13px;
+      width: auto;
+      height: 20px;
     }
   }
 
@@ -45,8 +44,8 @@
     padding: 0 14px;
 
     svg {
-      width: 14px;
-      height: 14px;
+      width: auto;
+      height: 20px;
     }
   }
 
@@ -61,7 +60,7 @@
       color: g.$primary-color;
 
       &:hover {
-        background-color: g.$primary-light-color;
+        background-color: g.$primary-color;
         color: g.$white-color;
 
         svg {
@@ -100,6 +99,25 @@
 
       &:hover {
         background-color: g.$primary-light-color;
+        color: g.$white-color;
+
+        svg {
+          fill: white;
+        }
+      }
+    }
+
+    &.ghost-dark {
+      border: 1px solid transparent;
+      background-color: transparent;
+      color: g.$text-color-1-color;
+
+      svg {
+        fill:  g.$text-color-1-color;
+      }
+
+      &:hover {
+        background-color: black;
         color: g.$white-color;
 
         svg {

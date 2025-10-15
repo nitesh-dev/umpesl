@@ -1,0 +1,10 @@
+<div class="search">
+    @if(contentDirection === 'ltr') {
+    <ng-content></ng-content>
+    }
+    <input placeholder="Search" />
+    @if(contentDirection === 'rtl') {
+    <ng-content></ng-content>
+    }
+
+</div>

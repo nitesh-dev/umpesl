@@ -12,7 +12,7 @@ export class Button {
 
 
   /** Visual style variant */
-  @Input() variant: 'solid' | 'outline' | 'ghost' = 'solid';
+  @Input() variant: 'solid' | 'outline' | 'ghost' | 'ghost-dark' = 'solid';
 
   /** Color can be a theme keyword or any valid CSS color */
   @Input() color: 'primary' = 'primary';
@@ -25,6 +25,7 @@ export class Button {
 
   @Input() fullWidth = false;
   @Input() size: 'sm' | 'md' | 'lg' = 'md';
+
 
   /** Emits click event */
   @Output() pressed = new EventEmitter<void>();

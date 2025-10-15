@@ -2,15 +2,17 @@
 .dashboard-layout{
     display: grid;
     grid-template-columns: min-content 1fr;
-    height: 100vh;
-}
+    min-height: 100vh;
 
-
-.dashboard-layout{
     :last-child{
         padding: 28px 32px;
         background-color: g.$background-color;
-        min-height: 100vh;
+    }
 
+    :first-child{
+        position: sticky;
+        top: 0;
     }
 }
+
+

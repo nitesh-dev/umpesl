@@ -1,0 +1,7 @@
+<div class="toggle-group" rdxToggleGroup [value]="selected" aria-label="Text alignment">
+    @for(item of items; track item.value){
+    <button rdxToggleGroupItem [value]="item.value" class="toggle-group-item">
+        <ng-container *ngComponentOutlet="item.component">g</ng-container>
+    </button>
+    }
+</div>

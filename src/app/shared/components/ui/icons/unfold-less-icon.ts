@@ -1,0 +1,15 @@
+import { Component } from '@angular/core';
+
+        @Component({
+        selector: 'app-unfold-less-icon',
+        standalone: true,
+        template: `<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_155_2230" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<rect x="24" y="1.90735e-06" width="24" height="24" transform="rotate(90 24 1.90735e-06)"/>
+</mask>
+<g mask="url(#mask0_155_2230)">
+<path d="M4.69224 8.9L5.39999 8.19225L9.20774 12L5.39999 15.8078L4.69224 15.1L7.79224 12L4.69224 8.9ZM14.7922 12L18.6 8.19225L19.3077 8.9L16.2077 12L19.3077 15.1L18.6 15.8078L14.7922 12Z"/>
+</g>
+</svg>`,
+        })
+        export class UnfoldLessIcon {}

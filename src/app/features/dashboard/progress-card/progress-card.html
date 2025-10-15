@@ -1,0 +1,59 @@
+<div class="project-card">
+    <!-- Header -->
+    <div class="header">
+        <div class="header-info">
+            <h3 class="title">{{ project.title }}</h3>
+            <p class="subtitle">{{ project.subtitle }}</p>
+
+            <div class="status-container">
+                <div class="status-row">
+                    <span class="status-label">Status:</span>
+                    <span class="status-badge" [class.on-track]="project.status === 'On Track'">
+                        {{ project.status }}
+                    </span>
+                </div>
+                <div class="go-id">GO ID: {{ project.goId }}</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Completion -->
+    <hr>
+    <div class="completion">
+        <div class="completion-label">Overall Completion:</div>
+        <div class="completion-percent">{{ project.completion }}%</div>
+        <div class="progress-bar">
+            <div class="progress" [style.width.%]="project.completion"></div>
+        </div>
+    </div>
+
+    <!-- Business Unit -->
+    <div class="business-unit">
+        <div class="unit-label">Business Unit: {{ project.businessUnit }}</div>
+        <div class="tags">
+            @for (tag of project.tags; track tag) {
+            <span class="tag">{{ tag }}</span>
+            }
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="buttons">
+        <button class="btn primary">
+            <span class="icon">📄</span> DPR
+        </button>
+        <button class="btn secondary">
+            <span class="icon">📘</span> Master Sheet
+        </button>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div>Location: {{ project.location }}</div>
+        <div>Project Planner: {{ project.planner }}</div>
+    </div>
+</div>

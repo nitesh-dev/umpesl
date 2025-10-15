@@ -3,8 +3,8 @@
         <h2 class="greeting">Hi {{ userName }}</h2>
 
         <div class="top-actions">
-           <app-button variant="ghost">Notification</app-button>
-            <button class="primary">+ Add Status</button>
+            <app-button variant="ghost-dark"><app-notifications-icon /> Notifications</app-button>
+            <app-button variant="outline"><app-add-icon /> Add Status</app-button>
         </div>
     </header>
 
@@ -32,56 +32,84 @@
     </section>
 
     <!-- Filters -->
-    <!-- <section class="filters">
-        <label>
-            Status
-            <select [(ngModel)]="filter.status">
-                <option *ngFor="let s of statusOptions" [value]="s">{{ s }}</option>
-            </select>
-        </label>
+    <section class="filters">
+        <span>Filter:</span>
+        <div>
+            <label>
+                Status:
+                <app-select />
+            </label>
 
-        <label>
-            Planner
-            <select [(ngModel)]="filter.planner">
-                <option *ngFor="let p of plannerOptions" [value]="p">{{ p }}</option>
-            </select>
-        </label>
+            <label>
+                Planner: <app-select />
+            </label>
 
-        <label>
-            Category
-            <select [(ngModel)]="filter.category">
-                <option *ngFor="let c of categoryOptions" [value]="c">{{ c }}</option>
-            </select>
-        </label>
+            <label>
+                Category:
+                <app-select />
+            </label>
 
-        <div class="filter-actions">
-            <button class="link" (click)="applyFilters()">Apply</button>
-            <button class="link" (click)="clearFilters()">Clear all</button>
+            <div class="filter-actions">
+                <button class="link" (click)="applyFilters()">Apply</button>
+                <button class="link danger" (click)="clearFilters()">Clear all</button>
+            </div>
+
+            <div class="input-box">
+                <app-input contentDirection="rtl">
+                    <app-search-icon />
+                </app-input>
+            </div>
         </div>
+    </section>
 
-        <div class="search">
-            <input placeholder="Search" />
+
+    <!-- sort by -->
+    <section class="sort-by">
+        <span>Sort by:</span>
+        <div>
+            <label>
+                Status:
+                <app-select />
+            </label>
+
+            <div class="toggle-group">
+                <app-toggle-group [items]="viewOptions" selected="grid" />
+            </div>
         </div>
-    </section> -->
+    </section>
+
+
 
     <!-- Projects grid -->
-    <!-- <section class="projects-grid">
-    <app-project-card
-      *ngFor="let p of projects"
-      [project]="p"
-    ></app-project-card>
-  </section> -->
+    <section class="projects-grid">
+        @for(i of [1,2,3,4,5,6]; track i) {
+        <app-dashboard-progress-card [project]="{
+    title: 'PKG 23 - Hooghly',
+    subtitle: 'Supply & Erection',
+    status: 'On Track',
+    goId: 'R/870120',
+    completion: 84.2,
+    businessUnit: 'Electrical',
+    tags: ['Electrical works', 'Ventilation', 'Water mist', 'Lighting system', 'Fire hydrant'],
+    location: 'Mumbai',
+    planner: 'Naresh'
+  }" />
+
+        }
+    </section>
 
 
 
-    <app-button color="primary" variant="outline"> <app-add-icon />Click me</app-button>
+    <!-- <app-button color="primary" variant="outline"> <app-assignment-icon /> me</app-button>
     <app-button>
         <app-add-icon />
         Click me
     </app-button>
+
+
     <app-button color="primary" size="lg"> <app-add-icon />Full Width</app-button>
     <app-button [fullWidth]="true" color="primary" variant="ghost" size="md"> <app-add-icon />Full Width</app-button>
-    <app-select />
+    <app-select /> -->
 
 
 

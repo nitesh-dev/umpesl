@@ -1,7 +1,15 @@
 import { Component } from '@angular/core';
 import { Select } from '../../shared/components/ui/select/select';
 import { Button } from '../../shared/components/ui/button/button';
-import { AddIcon } from "../../shared/components/ui/icons/add-icon/add-icon";
+import { AddIcon } from '../../shared/components/ui/icons/add-icon';
+import { AssignmentIcon } from '../../shared/components/ui/icons/assignment-icon';
+import { NotificationsIcon } from '../../shared/components/ui/icons/notifications-icon';
+import { InputComponent } from '../../shared/components/ui/input/input';
+import { SearchIcon } from '../../shared/components/ui/icons/search-icon';
+import { ToggleGroup, ToggleGroupItem } from '../../shared/components/ui/toggle-group/toggle-group';
+import { EventListIcon } from '../../shared/components/ui/icons/event-list-icon';
+import { GridViewIcon } from '../../shared/components/ui/icons/grid-view-icon';
+import { DashboardProgressCard } from "./progress-card/progress-card";
 
 interface Project {
   name: string;
@@ -17,7 +25,16 @@ interface Project {
 
 @Component({
   selector: 'app-dashboard',
-  imports: [Select, Button, AddIcon],
+  imports: [
+    Select,
+    Button,
+    AddIcon,
+    NotificationsIcon,
+    InputComponent,
+    SearchIcon,
+    ToggleGroup,
+    DashboardProgressCard,
+],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss',
 })
@@ -78,4 +95,15 @@ export class Dashboard {
   clearFilters() {
     this.filter = { status: 'On Track', planner: 'Prakash', category: 'Electrical' };
   }
+
+  viewOptions: ToggleGroupItem[] = [
+    {
+      component: GridViewIcon,
+      value: 'grid',
+    },
+    {
+      component: EventListIcon,
+      value: 'list',
+    },
+  ];
 }

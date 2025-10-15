@@ -1,0 +1,15 @@
+import { Component } from '@angular/core';
+
+        @Component({
+        selector: 'app-home-icon',
+        standalone: true,
+        template: `<svg width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_2008_393" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+<rect x="0.5" width="24" height="24"/>
+</mask>
+<g mask="url(#mask0_2008_393)">
+<path d="M6.5 18.9999H10.1923V13.1154H14.8077V18.9999H18.5V9.99993L12.5 5.46143L6.5 9.99993V18.9999ZM5.5 19.9999V9.49993L12.5 4.21143L19.5 9.49993V19.9999H13.8077V14.1154H11.1923V19.9999H5.5Z"/>
+</g>
+</svg>`,
+        })
+        export class HomeIcon {}
