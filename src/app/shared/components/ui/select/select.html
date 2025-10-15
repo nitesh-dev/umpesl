@@ -1,0 +1,13 @@
+<span rdxSelect>
+    <button class="SelectTrigger" rdxSelectTrigger>
+        <span rdxSelectValue [placeholder]="placeholder"></span>
+        <img class="SelectIcon" src="assets/icons/keyboard_arrow_down.svg" alt="arrow down" rdxSelectIcon />
+    </button>
+    <div class="SelectContent SelectViewport" rdxSelectContent>
+        @for (item of items; track item) {
+        <div class="SelectItem" [value]="item.value" [disabled]="item.disabled" rdxSelectItem>
+            {{ item.label }}
+        </div>
+        }
+    </div>
+</span>

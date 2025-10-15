@@ -3,7 +3,7 @@
 .sidebar {
   width: 240px;
   background: #fff;
-  border-right: 1px solid #e5e5e5;
+  border-right: 1px solid g.$divider-color;
   height: 100vh;
   padding: 15px;
   display: flex;
@@ -46,8 +46,8 @@
       width: 40px;
       height: 40px;
       border-radius: 8px;
-      background-color: g.$divider-background;
-      border: 0.5px solid g.$text-color-2-background;
+      background-color: g.$divider-color;
+      border: 0.5px solid g.$text-color-2-color;
     }
 
     .AvatarImage {
@@ -137,7 +137,7 @@
 
   .divider {
     border: none;
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid g.$divider-color;
     margin-top: 12px;
     margin-bottom: 12px;
     width: 100%;

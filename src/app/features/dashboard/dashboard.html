@@ -1,0 +1,89 @@
+<div class="dashboard">
+    <header class="top">
+        <h2 class="greeting">Hi {{ userName }}</h2>
+
+        <div class="top-actions">
+           <app-button variant="ghost">Notification</app-button>
+            <button class="primary">+ Add Status</button>
+        </div>
+    </header>
+
+    <!-- Stats row -->
+    <section class="stats">
+        <div class="stat-card">
+            <div class="label">Active Projects</div>
+            <div class="value">{{ stats.active }}</div>
+        </div>
+
+        <div class="stat-card on-track">
+            <div class="label">On Track</div>
+            <div class="value">{{ stats.onTrack }}</div>
+        </div>
+
+        <div class="stat-card at-risk">
+            <div class="label">At Risk</div>
+            <div class="value">{{ stats.atRisk}}</div>
+        </div>
+
+        <div class="stat-card delayed">
+            <div class="label">Delayed</div>
+            <div class="value">{{ stats.delayed }}</div>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <!-- <section class="filters">
+        <label>
+            Status
+            <select [(ngModel)]="filter.status">
+                <option *ngFor="let s of statusOptions" [value]="s">{{ s }}</option>
+            </select>
+        </label>
+
+        <label>
+            Planner
+            <select [(ngModel)]="filter.planner">
+                <option *ngFor="let p of plannerOptions" [value]="p">{{ p }}</option>
+            </select>
+        </label>
+
+        <label>
+            Category
+            <select [(ngModel)]="filter.category">
+                <option *ngFor="let c of categoryOptions" [value]="c">{{ c }}</option>
+            </select>
+        </label>
+
+        <div class="filter-actions">
+            <button class="link" (click)="applyFilters()">Apply</button>
+            <button class="link" (click)="clearFilters()">Clear all</button>
+        </div>
+
+        <div class="search">
+            <input placeholder="Search" />
+        </div>
+    </section> -->
+
+    <!-- Projects grid -->
+    <!-- <section class="projects-grid">
+    <app-project-card
+      *ngFor="let p of projects"
+      [project]="p"
+    ></app-project-card>
+  </section> -->
+
+
+
+    <app-button color="primary" variant="outline"> <app-add-icon />Click me</app-button>
+    <app-button>
+        <app-add-icon />
+        Click me
+    </app-button>
+    <app-button color="primary" size="lg"> <app-add-icon />Full Width</app-button>
+    <app-button [fullWidth]="true" color="primary" variant="ghost" size="md"> <app-add-icon />Full Width</app-button>
+    <app-select />
+
+
+
+
+</div>

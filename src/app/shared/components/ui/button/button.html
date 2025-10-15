@@ -1,0 +1,7 @@
+<button [attr.type]="type"
+  [attr.class]="'btn ' + color + ' ' + variant + ' ' + size + (fullWidth ? ' full-width' : '')"
+  [disabled]="disabled" (click)="handleClick()">
+
+  <ng-content></ng-content>
+
+</button>

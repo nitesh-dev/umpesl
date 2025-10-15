@@ -1,0 +1,111 @@
+@use '../../../../../styles' as g;
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Helvetica Neue';
+
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  // transition: all 0.3s ease;
+
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &.sm {
+    height: 2em;
+    font-size: 12px;
+    padding: 0 10px;
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &.md {
+    height: 2.5em;
+    font-size: 14px;
+    padding: 0 12px;
+
+    svg {
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  &.lg {
+    height: 3em;
+    font-size: 16px;
+    padding: 0 14px;
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &.primary {
+    border: 1px solid g.$primary-color;
+    background-color: g.$primary-color;
+    color: g.$white-color;
+
+    &.outline {
+      border: 1px solid g.$primary-light-color;
+      background-color: transparent;
+      color: g.$primary-color;
+
+      &:hover {
+        background-color: g.$primary-light-color;
+        color: g.$white-color;
+
+        svg {
+          fill: white;
+        }
+      }
+
+      svg {
+        fill: g.$primary-color;
+      }
+    }
+
+    &.solid {
+      border: 1px solid g.$primary-color;
+      background-color: g.$primary-color;
+      color: g.$white-color;
+
+      svg {
+        fill: white;
+      }
+
+      &:hover {
+        background-color: g.$primary-dark-color;
+        border-color: g.$primary-dark-color;
+      }
+    }
+
+    &.ghost {
+      border: 1px solid transparent;
+      background-color: transparent;
+      color: g.$primary-color;
+
+      svg {
+        fill: g.$primary-color;
+      }
+
+      &:hover {
+        background-color: g.$primary-light-color;
+        color: g.$white-color;
+
+        svg {
+          fill: white;
+        }
+      }
+    }
+  }
+}
