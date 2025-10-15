@@ -1,0 +1,49 @@
+<div class="login-container">
+    <div class="form-section">
+        <div class="form-content">
+            <!-- Logo -->
+            <img class="logo" src="assets/img/login-page-icon.png" alt="Universal Logo" />
+            <!-- Welcome text -->
+            <h1 class="title">Welcome back!</h1>
+            <p class="signup-text">
+                Don’t have an account yet?
+                <a href="#" class="signup-link">Sign up now</a>
+            </p>
+
+            <!-- Form -->
+            <form (ngSubmit)="onSubmit()" class="login-form">
+                <div class="input-group">
+                    <label>Email address</label>
+                    <input type="email" placeholder="Enter your email" [(ngModel)]="email" name="email" required />
+                </div>
+
+                <div class="input-group password-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password" [(ngModel)]="password" name="password"
+                        required />
+                    <span class="toggle-icon">
+                        <app-visibility-icon/>
+                    </span>
+                </div>
+
+                <div class="options">
+                    <label class="remember">
+                        <input type="checkbox" [(ngModel)]="rememberMe" name="remember" />
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn-primary">Sign in</button>
+
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+                <a href="#" class="sso-link">Log in with SSO</a>
+            </form>
+        </div>
+    </div>
+
+    <img class="image-background" src="assets/img/login-background.png" />
+</div>
