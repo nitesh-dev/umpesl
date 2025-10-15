@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "tools:icon-generator": "bun run ./tools/icon-component-generator.ts"
   },
   "prettier": {
     "printWidth": 100,
