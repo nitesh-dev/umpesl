@@ -1,0 +1,57 @@
+<div class="daily-progress-report">
+    <app-top-bar title="Daily Progress Report">
+        <app-button variant="ghost-dark"><app-notifications-icon /> Notifications</app-button>
+        <app-button variant="outline"><app-add-icon /> Add Status</app-button>
+    </app-top-bar>
+
+
+    <!-- Filters -->
+    <section class="filters">
+        <span>Filter:</span>
+        <div>
+            <label>
+                Status:
+                <app-select />
+            </label>
+
+            <label>
+                Planner: <app-select />
+            </label>
+
+            <label>
+                Category:
+                <app-select />
+            </label>
+
+            <div class="filter-actions">
+                <button class="link" (click)="applyFilters()">Apply</button>
+                <button class="link danger" (click)="clearFilters()">Clear all</button>
+            </div>
+
+            <div class="input-box">
+                <app-input contentDirection="rtl">
+                    <app-search-icon />
+                </app-input>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- sort by -->
+    <section class="sort-by">
+        <span>Sort by:</span>
+        <div>
+            <label>
+                Status:
+                <app-select />
+            </label>
+
+            <div class="toggle-group">
+                <app-toggle-group [items]="viewOptions" selected="grid" />
+            </div>
+        </div>
+    </section>
+
+
+    <app-kanban-board />
+</div>

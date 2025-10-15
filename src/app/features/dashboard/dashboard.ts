@@ -10,6 +10,7 @@ import { ToggleGroup, ToggleGroupItem } from '../../shared/components/ui/toggle-
 import { EventListIcon } from '../../shared/components/ui/icons/event-list-icon';
 import { GridViewIcon } from '../../shared/components/ui/icons/grid-view-icon';
 import { DashboardProgressCard } from "./progress-card/progress-card";
+import { TopBar } from "../../shared/components/top-bar/top-bar";
 
 interface Project {
   name: string;
@@ -34,6 +35,7 @@ interface Project {
     SearchIcon,
     ToggleGroup,
     DashboardProgressCard,
+    TopBar
 ],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss',

@@ -1,12 +1,8 @@
 <div class="dashboard">
-    <header class="top">
-        <h2 class="greeting">Hi {{ userName }}</h2>
-
-        <div class="top-actions">
-            <app-button variant="ghost-dark"><app-notifications-icon /> Notifications</app-button>
-            <app-button variant="outline"><app-add-icon /> Add Status</app-button>
-        </div>
-    </header>
+    <app-top-bar title="Hi Nitesh">
+        <app-button variant="ghost-dark"><app-notifications-icon /> Notifications</app-button>
+        <app-button variant="outline"><app-add-icon /> Add Status</app-button>
+    </app-top-bar>
 
     <!-- Stats row -->
     <section class="stats">

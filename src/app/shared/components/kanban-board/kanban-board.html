@@ -1,0 +1,55 @@
+<div class="board">
+    <div>
+        <div class="kanban-column">
+            <div class="header">
+                <span class="title">IN PROGRESS</span>
+                <span class="count">{{ items().length }}</span>
+            </div>
+
+            <div class="container">
+                @for (item of items(); track item.title) {
+                <app-dpr-kanban-card [data]="item" />
+                }
+            </div>
+        </div>
+
+        <div class="kanban-column">
+            <div class="header">
+                <span class="title">PENDING REVIEW</span>
+                <span class="count">{{ items().length }}</span>
+            </div>
+
+            <div class="container">
+                @for (item of items(); track item.title) {
+                <app-dpr-kanban-card [data]="item" />
+                }
+            </div>
+        </div>
+
+        <div class="kanban-column">
+            <div class="header">
+                <span class="title">APPROVED DPR</span>
+                <span class="count">{{ items().length }}</span>
+            </div>
+
+            <div class="container">
+                @for (item of items(); track item.title) {
+                <app-dpr-kanban-card [data]="item" />
+                }
+            </div>
+        </div>
+
+        <div class="kanban-column">
+            <div class="header">
+                <span class="title danger">REJECTED DPR</span>
+                <span class="count danger">{{ items().length }}</span>
+            </div>
+
+            <div class="container">
+                @for (item of items(); track item.title) {
+                <app-dpr-kanban-card [data]="item" />
+                }
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+@use '../../../../styles' as g;
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .title {
+    color: g.$primary-color;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .top-actions {
+    display: flex;
+    gap: 0.5rem;
+
+    // .icon-btn {
+    //   background: transparent;
+    //   border: none;
+    //   font-size: 1.1rem;
+    //   cursor: pointer;
+    // }
+
+    // .primary {
+    //   padding: 0.45rem 0.75rem;
+    //   border-radius: 0.5rem;
+    //   border: 1px solid g.$primary-color;
+    //   background: white;
+    //   cursor: pointer;
+    // }
+  }
+}

@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="header">
+    <h3>{{ data.title }}</h3>
+    <!-- <button class="menu-btn">⋮</button> -->
+  </div>
+
+  <div class="content">
+    <p><strong>Submitted by Site Engineer:</strong> {{ data.engineer }}</p>
+    <p><strong>Business Units:</strong> {{ data.businessUnit }}</p>
+    <p><strong>Area:</strong> {{ data.area }}</p>
+    <p><strong>Manpower Shortfall:</strong> {{ data.manpowerShortfall }}</p>
+    <p><strong>Hindrance Report:</strong> {{ data.hindranceReport }}</p>
+    <p><strong>Achievement Record:</strong> {{ data.achievementRecord }}</p>
+  </div>
+
+  <div class="footer">
+    <span class="status" [class.in-progress]="data.status === 'In Progress'">
+      {{ data.status }}
+    </span>
+  </div>
+</div>

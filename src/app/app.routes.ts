@@ -3,6 +3,7 @@ import { DashboardLayout } from './layouts/dashboard-layout/dashboard-layout';
 import { NotFound } from './features/not-found/not-found';
 import { Dashboard } from './features/dashboard/dashboard';
 import { Login } from './features/auth/login/login';
+import { DailyProgressReport } from './features/daily-progress-report/daily-progress-report';
 
 export const routes: Routes = [
   {
@@ -18,6 +19,10 @@ export const routes: Routes = [
         path: 'home',
         component: Dashboard,
       },
+      {
+        path: 'dpr',
+        component: DailyProgressReport
+      }
     ],
   },
   {

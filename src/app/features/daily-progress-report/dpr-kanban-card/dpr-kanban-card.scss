@@ -1,0 +1,109 @@
+.card {
+  display: flex;
+  padding: 11px 16px;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #fff;
+  width: 100%;
+
+  /* Shadow 1 */
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #222;
+
+  h3 {
+    color: var(--Text-Colour-1, #111827);
+
+    /* Header 2 */
+    font-family: 'FS Elliot Pro';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    margin-top: 8px;
+  }
+}
+
+.menu-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.content {
+  p {
+    color: var(--Text-Colour-2, #6b7280);
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0.6em 0;
+
+    &:first-child {
+      color: var(--Text-Colour-1, #111827);
+      font-size: 14px;
+    }
+
+    strong {
+      font-weight: normal;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 18px;
+  right: 16px;
+}
+
+.status {
+  display: flex;
+  height: 19px;
+  padding: 3px 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+
+  font-family: 'Helvetica Neue';
+  font-size: 11px;
+
+  &.in-progress {
+    border: 0.5px solid var(--Accent, #b45309);
+    background: #f3e7de;
+    color: var(--Accent, #b45309);
+  }
+
+  &.in-pending {
+    border: 0.5px solid var(--Status-Warning, #facc15);
+    background: #fff5d9;
+    color: var(--Status-Warning, #facc15);
+  }
+
+  &.in-approved {
+    border: 0.5px solid var(--Status-Success, #22c55e);
+    background: #ebffee;
+    color: var(--Status-Success, #22c55e);
+  }
+
+  &.in-rejected {
+    border: 0.5px solid var(--Status-Critical, #ef4444);
+    background: #f2e2e2;
+    color: var(--Status-Critical, #ef4444);
+  }
+}

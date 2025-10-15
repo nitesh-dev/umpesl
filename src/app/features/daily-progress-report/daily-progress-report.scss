@@ -1,70 +1,14 @@
-@use '../../../styles' as g;
-
-.dashboard {
+.daily-progress-report {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 
-  .stats {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 12px;
-
-
-    .stat-card {
-      display: flex;
-      // width: 266px;
-      flex: 1;
-      padding: 16px 71px;
-      flex-direction: column;
-      align-items: center;
-      gap: 26px;
-      flex-shrink: 0;
-
-      border-radius: 8px;
-      background: var(--White, #fff);
-
-      /* Shadow 1 */
-      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
-
-      .label {
-        color: var(--Text-Colour-1, #111827);
-
-        /* Body M */
-        font-family: 'Helvetica Neue';
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        margin-top: 12px;
-      }
-
-      .value {
-        color: var(--Primary, #0d66ab);
-        text-align: center;
-
-        /* Numbers */
-        font-family: Inter;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        margin-bottom: 12px;
-      }
-
-      &.on-track .value {
-        color: var(--Status-Success, #22c55e);
-      }
-      &.at-risk .value {
-        color: var(--Status-Warning-2, #ff5733);
-      }
-      &.delayed .value {
-        color: var(--Status-Critical, #ef4444);
-      }
-    }
+  .filters{
+    margin-top: 16px;
   }
 
-  .filters, .sort-by {
+  .filters,
+  .sort-by {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -121,7 +65,7 @@
         border: none;
         background-color: transparent;
 
-        &.danger{
+        &.danger {
           color: var(--Status-Critical, #ef4444);
         }
 
@@ -138,11 +82,5 @@
     .toggle-group {
       margin-left: auto;
     }
-  }
-
-  .projects-grid {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
   }
 }
