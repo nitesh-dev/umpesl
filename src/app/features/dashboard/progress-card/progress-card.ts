@@ -1,4 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { AssignmentIcon } from "../../../shared/components/ui/icons/assignment-icon";
+import { NoteStackIcon } from "../../../shared/components/ui/icons/note-stack-icon";
 
 export interface ProgressCard {
   title: string;
@@ -14,9 +16,10 @@ export interface ProgressCard {
 
 @Component({
   selector: 'app-dashboard-progress-card',
-  imports: [],
+  imports: [AssignmentIcon, NoteStackIcon],
   templateUrl: './progress-card.html',
   styleUrl: './progress-card.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class DashboardProgressCard {
   @Input() project!: ProgressCard;

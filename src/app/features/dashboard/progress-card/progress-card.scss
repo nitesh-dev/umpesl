@@ -1,6 +1,6 @@
 // TODO: Replace hardcoded colors with variables from global styles
 
-@use "../../../../styles" as g;
+@use '../../../../styles' as g;
 .project-card {
   background: #fff;
   border-radius: 8px;
@@ -149,18 +149,15 @@
       gap: 6px;
       transition: all 0.2s ease;
 
+      color: g.$primary-color;
+      border-color: g.$primary-color;
+
       &:hover {
         background: #f5f5f5;
       }
 
-      &.primary {
-        color: #0a8f3d;
-        border-color: #0a8f3d;
-      }
-
-      &.secondary {
-        color: #0077c8;
-        border-color: #0077c8;
+      svg{
+        fill: g.$primary-color;
       }
     }
   }
