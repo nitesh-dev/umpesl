@@ -1,1 +1,49 @@
-<p>support-ticket works!</p>
+<div class="client-dependency">
+    <app-top-bar title="Help - Support Ticket">
+        <app-button variant="ghost-dark"><app-notifications-icon /> Notifications</app-button>
+        <app-button variant="outline"><app-add-icon /> Create Ticket</app-button>
+    </app-top-bar>
+
+
+    <br>
+
+    <!-- Stats row -->
+    <section class="stats">
+        <div class="stat-card">
+            <div class="label">Pending dependencies</div>
+            <div class="value">{{ stats().pending }}</div>
+        </div>
+
+        <div class="stat-card on-track">
+            <div class="label">Average delay days</div>
+            <div class="value">{{ stats().delayed }}</div>
+        </div>
+
+        <div class="stat-card at-risk">
+            <div class="label">In Progress</div>
+            <div class="value">{{ stats().progress}}</div>
+        </div>
+
+        <div class="stat-card delayed">
+            <div class="label">Completed this month</div>
+            <div class="value">{{ stats().completed }}</div>
+        </div>
+    </section>
+
+    <div class="option-bar">
+        <app-check-box label="All" />
+        <app-check-box label="On Hold" />
+        <app-check-box label="In Progress" />
+        <app-check-box label="Completed" />
+
+        <div class="input-box">
+            <app-input contentDirection="rtl">
+                <app-search-icon />
+            </app-input>
+        </div>
+    </div>
+
+    <div class="table">
+        <app-table-view />
+    </div>
+</div>
