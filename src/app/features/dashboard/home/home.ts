@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { Select } from '../../shared/components/ui/select/select';
-import { Button } from '../../shared/components/ui/button/button';
-import { AddIcon } from '../../shared/components/ui/icons/add-icon';
-import { AssignmentIcon } from '../../shared/components/ui/icons/assignment-icon';
-import { NotificationsIcon } from '../../shared/components/ui/icons/notifications-icon';
-import { InputComponent } from '../../shared/components/ui/input/input';
-import { SearchIcon } from '../../shared/components/ui/icons/search-icon';
-import { ToggleGroup, ToggleGroupItem } from '../../shared/components/ui/toggle-group/toggle-group';
-import { EventListIcon } from '../../shared/components/ui/icons/event-list-icon';
-import { GridViewIcon } from '../../shared/components/ui/icons/grid-view-icon';
-import { DashboardProgressCard } from "./progress-card/progress-card";
-import { TopBar } from "../../shared/components/top-bar/top-bar";
+import { EventListIcon } from '../../../shared/components/ui/icons/event-list-icon';
+import { GridViewIcon } from '../../../shared/components/ui/icons/grid-view-icon';
+import { ToggleGroup, ToggleGroupItem } from '../../../shared/components/ui/toggle-group/toggle-group';
+import { TopBar } from '../../../shared/components/top-bar/top-bar';
+import { Button } from '../../../shared/components/ui/button/button';
+import { AddIcon } from '../../../shared/components/ui/icons/add-icon';
+import { NotificationsIcon } from '../../../shared/components/ui/icons/notifications-icon';
+import { SearchIcon } from '../../../shared/components/ui/icons/search-icon';
+import { InputComponent } from '../../../shared/components/ui/input/input';
+import { Select } from '../../../shared/components/ui/select/select';
+import { DashboardProgressCard } from './components/progress-card/progress-card';
+
 
 interface Project {
   name: string;
@@ -25,7 +25,7 @@ interface Project {
 }
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'app-home',
   imports: [
     Select,
     Button,
@@ -35,12 +35,12 @@ interface Project {
     SearchIcon,
     ToggleGroup,
     DashboardProgressCard,
-    TopBar
-],
-  templateUrl: './dashboard.html',
-  styleUrl: './dashboard.scss',
+    TopBar,
+  ],
+  templateUrl: './home.html',
+  styleUrl: './home.scss',
 })
-export class Dashboard {
+export class Home {
   userName = 'Ramesh';
 
   stats = {

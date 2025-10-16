@@ -1,10 +1,11 @@
 import { Routes } from '@angular/router';
 import { DashboardLayout } from './layouts/dashboard-layout/dashboard-layout';
 import { NotFound } from './features/not-found/not-found';
-import { Dashboard } from './features/dashboard/dashboard';
 import { Login } from './features/auth/login/login';
 import { DailyProgressReport } from './features/daily-progress-report/daily-progress-report';
 import { ClientDependency } from './features/client-dependency/client-dependency';
+import { Home } from './features/dashboard/home/home';
+import { ProjectDashboard } from './features/dashboard/home/project-dashboard/project-dashboard';
 
 export const routes: Routes = [
   {
@@ -18,7 +19,11 @@ export const routes: Routes = [
       },
       {
         path: 'home',
-        component: Dashboard,
+        component: Home,
+      },
+      {
+        path: 'project/:projectId',
+        component: ProjectDashboard,
       },
       {
         path: 'dpr',

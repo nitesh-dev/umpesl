@@ -1,4 +1,4 @@
-@use '../../../styles' as g;
+@use '../../../../styles' as g;
 
 .dashboard {
   display: flex;
@@ -9,7 +9,6 @@
     display: flex;
     gap: 1rem;
     margin-bottom: 12px;
-
 
     .stat-card {
       display: flex;
@@ -64,7 +63,8 @@
     }
   }
 
-  .filters, .sort-by {
+  .filters,
+  .sort-by {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -121,7 +121,7 @@
         border: none;
         background-color: transparent;
 
-        &.danger{
+        &.danger {
           color: var(--Status-Critical, #ef4444);
         }
 
