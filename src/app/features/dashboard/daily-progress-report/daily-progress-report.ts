@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
-import { TopBar } from '../../shared/components/top-bar/top-bar';
-import { Button } from '../../shared/components/ui/button/button';
-import { NotificationsIcon } from '../../shared/components/ui/icons/notifications-icon';
-import { AddIcon } from '../../shared/components/ui/icons/add-icon';
-import { Select } from '../../shared/components/ui/select/select';
-import { InputComponent } from '../../shared/components/ui/input/input';
-import { SearchIcon } from '../../shared/components/ui/icons/search-icon';
-import { ToggleGroup, ToggleGroupItem } from "../../shared/components/ui/toggle-group/toggle-group";
-import { EventListIcon } from '../../shared/components/ui/icons/event-list-icon';
-import { GridViewIcon } from '../../shared/components/ui/icons/grid-view-icon';
-import { KanbanBoard } from "../../shared/components/kanban-board/kanban-board";
+import { KanbanBoard } from '../../../shared/components/kanban-board/kanban-board';
+import { TopBar } from '../../../shared/components/top-bar/top-bar';
+import { Button } from '../../../shared/components/ui/button/button';
+import { AddIcon } from '../../../shared/components/ui/icons/add-icon';
+import { EventListIcon } from '../../../shared/components/ui/icons/event-list-icon';
+import { GridViewIcon } from '../../../shared/components/ui/icons/grid-view-icon';
+import { NotificationsIcon } from '../../../shared/components/ui/icons/notifications-icon';
+import { SearchIcon } from '../../../shared/components/ui/icons/search-icon';
+import { InputComponent } from '../../../shared/components/ui/input/input';
+import { Select } from '../../../shared/components/ui/select/select';
+import { ToggleGroup, ToggleGroupItem } from '../../../shared/components/ui/toggle-group/toggle-group';
+
 
 @Component({
   selector: 'app-daily-progress-report',

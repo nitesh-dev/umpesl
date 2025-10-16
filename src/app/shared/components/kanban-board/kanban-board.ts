@@ -2,7 +2,7 @@ import { Component, signal } from '@angular/core';
 import {
   DprCardType,
   DprKanbanCard,
-} from '../../../features/daily-progress-report/dpr-kanban-card/dpr-kanban-card';
+} from '../../../features/dashboard/daily-progress-report/dpr-kanban-card/dpr-kanban-card';
 
 @Component({
   selector: 'app-kanban-board',
