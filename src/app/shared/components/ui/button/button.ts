@@ -1,16 +1,14 @@
-import { NgIf } from '@angular/common';
-import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
+import { CommonModule, NgComponentOutlet, NgIf } from '@angular/common';
+import { Component, EventEmitter, Input, Output, Type, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-button',
-  imports: [],
+  imports: [NgComponentOutlet, CommonModule],
   templateUrl: './button.html',
   styleUrl: './button.scss',
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class Button {
-
-
   /** Visual style variant */
   @Input() variant: 'solid' | 'outline' | 'ghost' | 'ghost-dark' = 'solid';
 
@@ -30,9 +28,7 @@ export class Button {
   /** Emits click event */
   @Output() pressed = new EventEmitter<void>();
 
-
   handleClick(): void {
     if (!this.disabled) this.pressed.emit();
   }
-
 }

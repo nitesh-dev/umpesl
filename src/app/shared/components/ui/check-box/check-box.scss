@@ -1,0 +1,52 @@
+@use '../../../../../styles' as g;
+
+:host {
+  button {
+    all: unset;
+  }
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .checkbox-button {
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border: 1px solid g.$text-color-1-color;
+
+    //   &:hover {
+    //     background-color: var(--violet-3);
+    //   }
+
+    .checkbox-indicator {
+      align-items: center;
+      display: flex;
+      color: g.$text-color-1-color;
+
+      &[data-state='unchecked'] {
+        display: none;
+      }
+
+      svg {
+        width: 18px;
+        height: auto;
+        margin-top: 2px;
+        color: g.$text-color-1-color;
+      }
+    }
+  }
+
+  .label {
+    color: g.$text-color-1-color;
+    font-size: 16px;
+  }
+}

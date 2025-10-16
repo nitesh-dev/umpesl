@@ -1,8 +1,8 @@
 <div class="sidebar">
     <!-- Profile Section -->
-     <button class="icon-button">
+    <button class="icon-button">
         <img src="assets/icons/unfold_less.svg" alt="unfold">
-     </button>
+    </button>
     <div class="profile">
         <!-- <div class="avatar">{{ user.initials }}</div> -->
         <span class="AvatarRoot" rdxAvatarRoot>
@@ -22,8 +22,7 @@
         @for (item of topMenu; track item.path) {
         <a class="nav-item" [routerLink]="item.path" routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }">
-            <!-- <i class="icon">★</i> -->
-            <img class="icon" [src]="'assets/icons/' + item.icon" [alt]="item.icon" />
+            <ng-container *ngComponentOutlet="item.icon"></ng-container>
             <span>{{ item.label }}</span>
         </a>
         }
@@ -38,7 +37,7 @@
         <a class="nav-item" [routerLink]="item.path" routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }">
             <!-- <i class="icon">★</i> -->
-            <img class="icon" [src]="'assets/icons/' + item.icon" [alt]="item.icon" />
+            <ng-container *ngComponentOutlet="item.icon"></ng-container>
             <span>{{ item.label }}</span>
         </a>
         }
@@ -52,7 +51,7 @@
     <nav class="nav-section">
         @for (item of adminMenu; track item.path) {
         <a class="nav-item" [routerLink]="item.path" routerLinkActive="active">
-            <img class="icon" [src]="'assets/icons/' + item.icon" [alt]="item.icon" />
+            <ng-container *ngComponentOutlet="item.icon"></ng-container>
             <span>{{ item.label }}</span>
         </a>
         }
@@ -66,7 +65,7 @@
     <nav class="nav-section">
         @for (item of helpMenu; track item.path) {
         <a class="nav-item" [routerLink]="item.path" routerLinkActive="active">
-            <img class="icon" [src]="'assets/icons/' + item.icon" [alt]="item.icon" />
+            <ng-container *ngComponentOutlet="item.icon"></ng-container>
             <span>{{ item.label }}</span>
         </a>
         }

@@ -1,0 +1,9 @@
+<div class="checkbox">
+    <div [checked]="checked()" rdxCheckboxRoot>
+        <button class="checkbox-button" [id]="id" rdxCheckboxButton>
+            <i class="checkbox-indicator" rdxCheckboxIndicator><app-check-icon /></i>
+        </button>
+        <input rdxCheckboxInput />
+    </div>
+    <label class="label" [htmlFor]="id" rdxLabel>{{label}}</label>
+</div>

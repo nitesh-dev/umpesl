@@ -11,5 +11,11 @@ import { Component } from '@angular/core';
 <path d="M6.5 18.9999H10.1923V13.1154H14.8077V18.9999H18.5V9.99993L12.5 5.46143L6.5 9.99993V18.9999ZM5.5 19.9999V9.49993L12.5 4.21143L19.5 9.49993V19.9999H13.8077V14.1154H11.1923V19.9999H5.5Z"/>
 </g>
 </svg>`,
+          styles: `
+            :host {
+              display: flex;
+              align-items: center;
+            }
+        `,
         })
         export class HomeIcon {}

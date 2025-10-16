@@ -11,5 +11,11 @@ import { Component } from '@angular/core';
 <path d="M6.30775 6.5155L1 1.20775L1.70775 0.5L6.30775 5.1L10.9078 0.5L11.6155 1.20775L6.30775 6.5155Z"/>
 </g>
 </svg>`,
+          styles: `
+            :host {
+              display: flex;
+              align-items: center;
+            }
+        `,
         })
         export class KeyboardArrowDownIcon {}

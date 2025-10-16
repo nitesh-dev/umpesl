@@ -114,6 +114,7 @@
     font-size: 16px;
     text-decoration: none;
     cursor: pointer;
+    gap: 4px;
 
     .icon {
       width: 24px;
@@ -124,14 +125,19 @@
     }
 
     &:hover {
-      background: #f3f4f6;
+      // background: #f3f4f6;
       color: #111827;
     }
 
     &.active {
-      background: #e5e7eb;
-      color: #111827;
+      // background: #e5e7eb;
+      color: var(--Primary, #0D66AB);
       font-weight: 500;
+
+      svg{
+        fill: var(--Primary, #0D66AB);
+        // margin-top: 2px;
+      }
     }
   }
 

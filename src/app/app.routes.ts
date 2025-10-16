@@ -4,6 +4,7 @@ import { NotFound } from './features/not-found/not-found';
 import { Dashboard } from './features/dashboard/dashboard';
 import { Login } from './features/auth/login/login';
 import { DailyProgressReport } from './features/daily-progress-report/daily-progress-report';
+import { ClientDependency } from './features/client-dependency/client-dependency';
 
 export const routes: Routes = [
   {
@@ -21,8 +22,12 @@ export const routes: Routes = [
       },
       {
         path: 'dpr',
-        component: DailyProgressReport
-      }
+        component: DailyProgressReport,
+      },
+      {
+        path: 'admin',
+        children: [{ path: 'client-dependency', component: ClientDependency }],
+      },
     ],
   },
   {

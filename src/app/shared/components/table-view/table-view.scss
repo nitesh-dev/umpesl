@@ -1,0 +1,117 @@
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'FS Elliot Pro';
+  }
+
+  &.normal,
+  &.compact {
+    thead {
+      background: transparent;
+      font-weight: 600;
+      border-top: 1px solid var(--Divider, #e5e7eb);
+      // border-bottom: 1px solid var(--Divider, #e5e7eb);
+
+      td {
+        text-align: left;
+        color: var(--Text-Colour-1, #111827);
+        font-size: 15px;
+        font-weight: 700;
+      }
+    }
+
+    tbody tr {
+      border-top: 1px solid var(--Divider, #e5e7eb);
+      transition: background 0.2s ease;
+
+      &:hover {
+        background: #f9fafc;
+      }
+    }
+
+    td {
+      color: var(--Text-Colour-1, #111827);
+      font-size: 14px;
+      padding: 8px;
+
+      select {
+        padding: 4px 8px;
+        border: 1px solid #d0d0d0;
+        border-radius: 4px;
+      }
+
+      .status {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        .dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+        }
+
+        &.in\ progress .dot {
+          background-color: #facc15;
+        }
+        &.complete .dot {
+          background-color: #22c55e;
+        }
+      }
+
+      .action-btn {
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-weight: 500;
+
+        &.complete {
+          color: #22c55e;
+        }
+        &.incomplete {
+          color: #ef4444;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &.compact {
+    thead {
+      background-color: #f2f2f2;
+      border-top: none;
+      tr {
+        height: 60px;
+      }
+    }
+
+    tbody {
+      tr {
+        background-color: transparent;
+
+        &:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+      }
+    }
+  }
+
+  &.normal {
+    thead {
+      tr {
+        height: 70px;
+      }
+    }
+
+    tbody tr {
+      height: 80px;
+    }
+  }
+}

@@ -5,6 +5,11 @@ import * as path from 'path';
 const ICONS_DIR = path.resolve('src/assets/icons');
 const OUTPUT_DIR = path.resolve('src/app/shared/components/ui/icons');
 
+// remove existing output directory and its contents
+if (fs.existsSync(OUTPUT_DIR)) {
+  fs.rmSync(OUTPUT_DIR, { recursive: true, force: true });
+}
+
 // ensure output directory exists
 if (!fs.existsSync(OUTPUT_DIR)) {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -37,6 +42,12 @@ for (const file of svgFiles) {
         selector: '${selector}',
         standalone: true,
         template: \`${svgContent}\`,
+          styles: \`
+            :host {
+              display: flex;
+              align-items: center;
+            }
+        \`,
         })
         export class ${className} {}
 `.trim() + '\n';

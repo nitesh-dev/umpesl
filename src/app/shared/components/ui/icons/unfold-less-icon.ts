@@ -11,5 +11,11 @@ import { Component } from '@angular/core';
 <path d="M4.69224 8.9L5.39999 8.19225L9.20774 12L5.39999 15.8078L4.69224 15.1L7.79224 12L4.69224 8.9ZM14.7922 12L18.6 8.19225L19.3077 8.9L16.2077 12L19.3077 15.1L18.6 15.8078L14.7922 12Z"/>
 </g>
 </svg>`,
+          styles: `
+            :host {
+              display: flex;
+              align-items: center;
+            }
+        `,
         })
         export class UnfoldLessIcon {}

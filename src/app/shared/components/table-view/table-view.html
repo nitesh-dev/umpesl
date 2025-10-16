@@ -1,0 +1,62 @@
+<div class="table-container {{ theme }}">
+  <table>
+    <thead>
+      <tr>
+        @for (col of columns; track col.key) {
+          <td>{{ col.label }}</td>
+        }
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (row of data; track row['id'] ?? row) {
+        <tr>
+          @for (col of columns; track col.key) {
+            <td>
+              @switch (col.type) {
+                @case ('dropdown') {
+                  <select>
+                    @for (opt of row[col.key]?.options ?? []; track opt) {
+                      <option [value]="opt">{{ opt }}</option>
+                    }
+                  </select>
+                }
+
+                @case ('status') {
+                  <span class="status {{ row[col.key] }}">
+                    <span class="dot"></span>
+                    {{ row[col.key] }}
+                  </span>
+                }
+
+                <!-- @case ('action') {
+                  @if (row['status'] === 'In Progress') {
+                    <button
+                      class="action-btn complete"
+                      (click)="onActionClick(row, 'complete')">
+                      Mark as Completed
+                    </button>
+                  } @else {
+                    <button
+                      class="action-btn incomplete"
+                      (click)="onActionClick(row, 'incomplete')">
+                      Mark as Incompleted
+                    </button>
+                  }
+                } -->
+
+                @case ('date') {
+                  {{ row[col.key] }}
+                }
+
+                @default {
+                  {{ row[col.key] }}
+                }
+              }
+            </td>
+          }
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
