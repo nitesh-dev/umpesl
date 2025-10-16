@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { VisibilityIcon } from "../../../shared/components/ui/icons/visibility-icon";
+import { VisibilityIcon } from "@shared/components/ui/icons/visibility-icon";
 
 @Component({
   selector: 'app-login',
