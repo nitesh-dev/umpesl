@@ -1,6 +1,9 @@
 .project-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   .charts {
-    margin-top: 24px;
+    // margin-top: 24px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
