@@ -1,0 +1,115 @@
+.project-dashboard {
+  .charts {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .summery-container {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .summary-card {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      //   justify-content: center;
+      border-radius: 8px;
+      background: var(--White, #fff);
+      padding: 16px;
+      align-items: center;
+      min-height: 132px;
+
+      /* Shadow 1 */
+      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
+
+      .summary-header {
+        display: flex;
+        gap: 8px;
+        color: #000;
+        font-size: 14px;
+        span {
+          color: var(--Text-Colour-2, #6b7280);
+          font-size: 13px;
+        }
+
+        &.progress {
+          flex-direction: column;
+          align-items: center;
+          gap: 4px;
+        }
+
+        .dropdown-icon {
+          font-size: 13px;
+          color: black;
+          cursor: pointer;
+        }
+      }
+
+      .summary-body {
+        margin-top: 28px;
+
+        .stat {
+          text-align: center;
+
+          .value {
+            color: var(--Primary, #0d66ab);
+            font-size: 42px;
+            font-weight: 700;
+          }
+
+          .label {
+            color: #000;
+            font-size: 12px;
+          }
+        }
+
+        &.dual {
+          width: 100%;
+          max-width: 150px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        &.progress {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          margin-top: auto;
+          width: 100%;
+
+          .progress-bar {
+            position: relative;
+            height: 24px;
+            // border-radius: 8px;
+            background: var(--Primary-Dark, #08436f);
+            overflow: hidden;
+
+            .progress-fill {
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 100%;
+              width: 40%; // ratio (87.33 / 90.94)
+              background: var(--Primary-Light, #4c8dc5);
+              transition: width 1s ease-in-out;
+            }
+          }
+
+          .progress-labels {
+            display: flex;
+            justify-content: space-between;
+            color: var(--Text-Colour-1, #111827);
+            font-weight: 700;
+            font-size: 13px;
+            margin: 2px;
+          }
+        }
+      }
+    }
+  }
+}

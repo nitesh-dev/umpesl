@@ -5,7 +5,7 @@ import { Login } from './features/auth/login/login';
 import { DailyProgressReport } from './features/dashboard/daily-progress-report/daily-progress-report';
 import { ClientDependency } from './features/dashboard/admin/client-dependency/client-dependency';
 import { Home } from './features/dashboard/home/home';
-import { ProjectDashboard } from './features/dashboard/home/project-dashboard/project-dashboard';
+import { ProjectDashboard } from './features/dashboard/project-dashboard/project-dashboard';
 import { SupportTicket } from './features/dashboard/help/support-ticket/support-ticket';
 import { TrainingResources } from './features/dashboard/help/training-resources/training-resources';
 import { Guide } from './features/dashboard/help/guide/guide';

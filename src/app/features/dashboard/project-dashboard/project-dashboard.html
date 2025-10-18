@@ -1,0 +1,80 @@
+<!-- <app-project-completion-chart /> -->
+<div class="project-dashboard">
+    <app-top-bar title="Project Dashboard">
+        <app-button variant="ghost-dark"><app-notifications-icon /> Notifications</app-button>
+        <app-button variant="outline"><app-add-icon /> Add Status</app-button>
+    </app-top-bar>
+    <div class="summery-container">
+
+        <!-- Safety Status -->
+        <div class="summary-card">
+            <div class="summary-header">
+                Safety Status (NCR N/A)
+                <span class="dropdown-icon">▾</span>
+            </div>
+            <div class="summary-body dual">
+                <div class="stat">
+                    <div class="value">5</div>
+                    <div class="label">Closed</div>
+                </div>
+                <div class="stat">
+                    <div class="value">0</div>
+                    <div class="label">Open</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quality Status -->
+        <div class="summary-card">
+            <div class="summary-header">
+                Quality Status (FOR N/A)
+                <span class="dropdown-icon">▾</span>
+            </div>
+            <div class="summary-body dual">
+                <div class="stat">
+                    <div class="value">0</div>
+                    <div class="label">Closed</div>
+                </div>
+                <div class="stat">
+                    <div class="value">5</div>
+                    <div class="label">Open</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pending DPR Review -->
+        <div class="summary-card">
+            <div class="summary-header">Pending DPR Review</div>
+            <div class="summary-body">
+                <div class="stat">
+                    <div class="value">0</div>
+                    <!-- <div class="label">Closed</div> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Original vs Current TO -->
+        <div class="summary-card">
+            <div class="summary-header progress">
+                Original vs Current TO
+                <span>(Jul ’25)</span>
+            </div>
+            <div class="summary-body progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-labels">
+                    <span>87.33 cr.</span>
+                    <span>90.94 cr.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="charts">
+        <app-installation-progress-chart />
+        <app-project-overall-progress-chart/>
+        <app-financial-turnover-chart/>
+        <app-procurement-status-chart/>
+
+    </div>
+</div>

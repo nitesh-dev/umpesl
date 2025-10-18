@@ -1,0 +1,39 @@
+<div class="chart-wrapper">
+    <div class="inner">
+        <div>
+            <span class="title">Physical Progress Status - Installation Progress</span>
+            <div class="chart-container">
+                <canvas baseChart [type]="chartType" [data]="chartData" [options]="chartOptions"> </canvas>
+            </div>
+        </div>
+
+        <div class="comment-box">
+            <h4>Comment on Site Access & Front Availability</h4>
+            <p>LT/HT</p>
+            <p>Month Plan: <strong>150</strong></p>
+            <p>Month Actual: <strong>45</strong></p>
+            <p>Cum. Actual: <strong>1215</strong></p>
+            <p>Scope: <strong>1931</strong></p>
+            <p>Balance as on date: <strong>716</strong></p>
+        </div>
+    </div>
+
+
+    <div class="custom-legend">
+        <div class="legend-item">
+            <span class="legend-box blue-pattern"></span>
+            <span class="legend-label">Cumulative Planned vs Actual</span>
+        </div>
+
+        <div class="legend-item">
+            <span class="legend-box orange-pattern"></span>
+            <span class="legend-label">Current Month Planned vs Actual %</span>
+        </div>
+
+        <div class="legend-item">
+            <span class="legend-box shortfall"></span>
+            <span class="legend-label">Shortfall</span>
+        </div>
+    </div>
+
+</div>
