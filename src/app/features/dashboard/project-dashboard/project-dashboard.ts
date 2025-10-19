@@ -9,11 +9,13 @@ import { ProjectOverallProgressChart } from '@shared/components/charts/project-o
 import { FinancialTurnoverChart } from '@shared/components/charts/financial-turnover-chart/financial-turnover-chart';
 import { ProcurementStatusChart } from '@shared/components/charts/procurement-status-chart/procurement-status-chart';
 import { Legend, StatCard } from './components/stat-card/stat-card';
+import { ManpowerStatusChart } from '@shared/components/charts/manpower-status-chart/manpower-status-chart';
+import { CommissionHotoStatusChart } from '@shared/components/charts/commission-hoto-status-chart/commission-hoto-status-chart';
+import { EngineeringStatusChart } from '@shared/components/charts/engineering-status-chart/engineering-status-chart';
 
 @Component({
   selector: 'app-project-dashboard',
   imports: [
-    ProjectCompletionChart,
     InstallationProgressChart,
     TopBar,
     Button,
@@ -23,6 +25,9 @@ import { Legend, StatCard } from './components/stat-card/stat-card';
     FinancialTurnoverChart,
     ProcurementStatusChart,
     StatCard,
+    ManpowerStatusChart,
+    CommissionHotoStatusChart,
+    EngineeringStatusChart,
   ],
   templateUrl: './project-dashboard.html',
   styleUrl: './project-dashboard.scss',
@@ -65,6 +70,30 @@ export class ProjectDashboard {
     {
       pattern: 'brown-yellow-pattern',
       label: 'Total PO Planned vs Actual%',
+    },
+  ];
+
+  commissionStatusLegends: Legend[] = [
+    {
+      pattern: 'dark-light-blue-pattern',
+      label: 'Cumulative Planned vs Actual %',
+    },
+    { pattern: 'pink-pattern', label: 'Shortfall' },
+    {
+      pattern: 'brown-yellow-pattern',
+      label: 'Total Planned vs Actual%',
+    },
+  ];
+
+  engineeringStatusLegends: Legend[] = [
+    {
+      pattern: 'dark-blue-pattern',
+      label: 'Cumulative Submission Planned',
+    },
+    { pattern: 'light-blue-pattern', label: 'Cumulative Submitted' },
+    {
+      pattern: 'brown-pattern',
+      label: 'Approved',
     },
   ];
 }

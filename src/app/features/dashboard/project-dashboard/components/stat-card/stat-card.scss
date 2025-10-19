@@ -23,6 +23,7 @@
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
+    margin-bottom: 24px;
   }
 
   .inner {
@@ -71,6 +72,14 @@
             $light-blue-color 0 50%,
             $dark-blue-color 50% 100%
           );
+        }
+
+        &.dark-blue-pattern {
+          background: $dark-blue-color;
+        }
+
+        &.light-blue-pattern {
+          background: $light-blue-color;
         }
 
         /* 🟧 Diagonal orange/yellow pattern */

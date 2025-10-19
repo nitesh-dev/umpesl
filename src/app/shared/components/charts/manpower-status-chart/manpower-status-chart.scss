@@ -1,0 +1,43 @@
+.chart-container {
+  display: flex;
+  flex-direction: column;
+
+  .canvas-container {
+    flex: 1;
+
+    canvas {
+      width: 100% !important;
+      height: 180px !important;
+    }
+  }
+
+  .content-box {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .row {
+      display: flex;
+      gap: 8px;
+      font-size: 13px;
+      max-width: 300px;
+
+      color: var(--Text-Colour-1, #111827);
+
+      .arrow {
+        font-weight: bold;
+        color: var(--Text-Colour-1, #111827);
+        font-size: 14px;
+      }
+
+      .text {
+        strong {
+          //   color: #111827;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}

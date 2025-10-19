@@ -71,20 +71,32 @@
         </div>
     </div>
     <div class="charts">
-        <app-stat-card title="Physical Progress Status  - Installation Progress" [legends]="installationLegends"> 
-            <app-installation-progress-chart/>
+        <app-stat-card title="Physical Progress Status  - Installation Progress" [legends]="installationLegends">
+            <app-installation-progress-chart />
         </app-stat-card>
 
         <app-stat-card title="Project overall progress ">
-            <app-project-overall-progress-chart/>
+            <app-project-overall-progress-chart />
         </app-stat-card>
 
         <app-stat-card title="Financial Turnover Status" [legends]="financialTurnoverLegends">
-            <app-financial-turnover-chart/>
+            <app-financial-turnover-chart />
         </app-stat-card>
 
         <app-stat-card title="Procurement status" [legends]="procurementStatusLegends">
-            <app-procurement-status-chart/>
+            <app-procurement-status-chart />
+        </app-stat-card>
+
+        <app-stat-card title="Manpower Status">
+            <app-manpower-status-chart />
+        </app-stat-card>
+
+        <app-stat-card title="commissioning & hoto status" [legends]="commissionStatusLegends">
+            <app-commission-hoto-status-chart />
+        </app-stat-card>
+
+        <app-stat-card title="engineering status" [legends]="engineeringStatusLegends">
+            <app-engineering-status-chart />
         </app-stat-card>
 
     </div>
