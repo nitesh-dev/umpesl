@@ -1,7 +1,14 @@
 <div class="checkbox">
     <div [checked]="checked()" rdxCheckboxRoot>
         <button class="checkbox-button" [id]="id" rdxCheckboxButton>
-            <i class="checkbox-indicator" rdxCheckboxIndicator><app-check-icon /></i>
+            <div class="checkbox-container" rdxCheckboxIndicator>
+            </div>
+
+            <i class="checkbox-indicator-default ">
+                <app-checkbox-unchecked-icon />
+            </i>
+            <i class="checkbox-indicator"><app-checkbox-checked-icon /></i>
+
         </button>
         <input rdxCheckboxInput />
     </div>

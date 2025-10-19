@@ -5,8 +5,10 @@ import {
   RdxCheckboxIndicatorDirective,
   RdxCheckboxInputDirective,
   RdxCheckboxRootDirective,
+  
 } from '@radix-ng/primitives/checkbox';
-import { CheckIcon } from "../icons/check-icon";
+import { CheckboxUncheckedIcon } from "../icons/checkbox-unchecked-icon";
+import {CheckboxCheckedIcon} from "../icons/checkbox-checked-icon"
 
 @Component({
   selector: 'app-check-box',
@@ -15,7 +17,8 @@ import { CheckIcon } from "../icons/check-icon";
     RdxCheckboxIndicatorDirective,
     RdxCheckboxInputDirective,
     RdxCheckboxRootDirective,
-    CheckIcon
+    CheckboxCheckedIcon,
+    CheckboxUncheckedIcon
 ],
   templateUrl: './check-box.html',
   styleUrl: './check-box.scss',

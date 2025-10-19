@@ -21,27 +21,38 @@
     align-items: center;
     justify-content: center;
     border: none;
-    border: 1px solid g.$text-color-1-color;
 
     //   &:hover {
     //     background-color: var(--violet-3);
     //   }
 
-    .checkbox-indicator {
+    // &[data-state='checked'] .checkbox-indicator-default{
+    //   display: none;
+    // }
+
+    > .checkbox-indicator,
+    > .checkbox-indicator-default {
       align-items: center;
       display: flex;
       color: g.$text-color-1-color;
 
-      &[data-state='unchecked'] {
-        display: none;
-      }
-
       svg {
-        width: 18px;
+        width: 24px;
         height: auto;
         margin-top: 2px;
-        color: g.$text-color-1-color;
+        fill: g.$text-color-1-color;
       }
+    }
+
+    &[data-state='unchecked'] > .checkbox-indicator {
+      display: none;
+    }
+
+    &[data-state='checked'] > .checkbox-indicator-default {
+      display: none;
+    }
+
+    .checkbox-container {
     }
   }
 
