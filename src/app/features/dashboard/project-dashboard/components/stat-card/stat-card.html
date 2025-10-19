@@ -1,17 +1,15 @@
 <div class="chart-wrapper">
     <span class="title">{{title}}</span>
     <div class="inner">
-        <span>d</span>
-        <span>d</span>
-
+        <ng-content/>
     </div>
 
 
     <div class="custom-legend">
 
         @for(item of legends; track item.label){
-        <div [class]="'legend-item ' + item.pattern" >
-            <span class="legend-box"></span>
+        <div class="legend-item">
+            <span [class]="'legend-box ' + item.pattern"></span>
             <span class="legend-label">{{item.label}}</span>
         </div>
         }

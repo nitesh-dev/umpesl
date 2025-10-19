@@ -1,25 +1,5 @@
-<div class="chart-wrapper">
-    <div class="inner">
-        <span class="title">Financial Turnover Status</span>
-        <div class="chart-container">
-            <!-- <canvas baseChart [type]="chartType" [data]="chartData" [options]="chartOptions"> </canvas> -->
-            <canvas baseChart [data]="chartData" [options]="chartOptions" [type]="chartType">
-            </canvas>
-        </div>
-    </div>
-
-
-    <div class="custom-legend">
-        <div class="legend-item">
-            <span class="legend-box blue-pattern"></span>
-            <span class="legend-label">Planned vs Actual</span>
-        </div>
-
-        <div class="legend-item">
-            <span class="legend-box orange-pattern"></span>
-            <span class="legend-label">Cumulative Turnover Realised</span>
-        </div>
-
-    </div>
-
+<div class="chart-container">
+    <!-- <canvas baseChart [type]="chartType" [data]="chartData" [options]="chartOptions"> </canvas> -->
+    <canvas baseChart [data]="chartData" [options]="chartOptions" [type]="chartType">
+    </canvas>
 </div>

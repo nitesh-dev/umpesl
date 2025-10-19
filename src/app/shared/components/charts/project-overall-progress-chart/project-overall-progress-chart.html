@@ -1,48 +1,40 @@
-<div class="chart-wrapper">
-    <div class="inner">
-        <div>
-            <span class="title">Project overall progress </span>
-            <div class="project-progress-container">
-                <!-- Completion Section -->
-                <div class="completion-section">
-                    <div class="completion-header">
-                        <div class="title">Overall Project Completion</div>
-                        <div class="status-badge">{{ status }}</div>
-                    </div>
-
-                    <div class="completion-value">{{ progressPercent }}%</div>
-
-                    <div class="progress-bar">
-                        <div class="progress-fill" [style.width.%]="progressPercent"></div>
-                    </div>
-                </div>
-
-                <!-- Risk Notes Section -->
-                <div class="risk-section">
-                    <div class="risk-title">Risk Notes</div>
-                    <ul class="risk-list">
-                        <li>
-                            <span class="arrow">→</span>
-                            <span class="text">
-                                The estimated completion date is 30-Sep-25, but we have an approved
-                                Extension of Time (EOT) until 26-Jul-25.
-                            </span>
-                        </li>
-                        <li>
-                            <span class="arrow">→</span>
-                            <span class="text">O/s as on 30th Jun is 20.84 Cr.</span>
-                        </li>
-                        <li>
-                            <span class="arrow">→</span>
-                            <span class="text">
-                                Progress is very low which is not in line with completion till expected
-                                target date of 26-Jul-25, Need to revisit and revise the plan accordingly.
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
+<div class="project-progress-container">
+    <!-- Completion Section -->
+    <div class="completion-section">
+        <div class="completion-header">
+            <div class="title">Overall Project Completion</div>
+            <div class="status-badge">{{ status }}</div>
         </div>
+
+        <div class="completion-value">{{ progressPercent }}%</div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" [style.width.%]="progressPercent"></div>
+        </div>
+    </div>
+
+    <!-- Risk Notes Section -->
+    <div class="risk-section">
+        <div class="risk-title">Risk Notes</div>
+        <ul class="risk-list">
+            <li>
+                <span class="arrow">→</span>
+                <span class="text">
+                    The estimated completion date is 30-Sep-25, but we have an approved
+                    Extension of Time (EOT) until 26-Jul-25.
+                </span>
+            </li>
+            <li>
+                <span class="arrow">→</span>
+                <span class="text">O/s as on 30th Jun is 20.84 Cr.</span>
+            </li>
+            <li>
+                <span class="arrow">→</span>
+                <span class="text">
+                    Progress is very low which is not in line with completion till expected
+                    target date of 26-Jul-25, Need to revisit and revise the plan accordingly.
+                </span>
+            </li>
+        </ul>
     </div>
 </div>
