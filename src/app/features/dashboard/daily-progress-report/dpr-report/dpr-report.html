@@ -1,0 +1,47 @@
+<div class="report">
+    <app-top-bar [bottomBar]="true" title="Hi Nitesh">
+        <app-button variant="ghost-dark"><app-notifications-icon /> Notifications</app-button>
+        <div class="app-bar-footer" footer>
+            <span>Report Status: <strong>In progress</strong></span>
+        </div>
+    </app-top-bar>
+
+
+
+    <div class="content">
+
+        <div class="info">
+            <span>Project Name: <strong class="box">PKG 23 Hoogly</strong></span>
+            <span>Date: <strong class="box">12 dec 2024</strong></span>
+            <span>Project Planner: <strong>Nitesh</strong></span>
+            <span>Site Engineer: <strong>Nitesh</strong></span>
+            <div class="buttons">
+                <app-button variant="outline"><app-download-icon /> Export</app-button>
+            </div>
+        </div>
+
+
+        <div class="cards">
+            <app-activity title="Activities completed for the day (DPR)">
+                <app-table-with-filter />
+            </app-activity>
+            <app-activity title="Activities completed for the day (Manual)">
+                <app-table-with-filter />
+            </app-activity>
+            <app-activity title="Manpower Log">
+                <app-table-with-filter />
+            </app-activity>
+            <app-activity title="Hindrance/ Achievement Log (Optional)">
+                <app-table-with-filter />
+            </app-activity>
+            <app-activity title="Remarks/ Constraints (L2 Remarks)">
+                L2 remarks
+            </app-activity>
+            <app-activity title="Remarks/ Constraints (L3 Remarks)">
+                 L3 remarks
+            </app-activity>
+            <app-activity title="Remarks/ Constraints (Optional)"></app-activity>
+        </div>
+
+    </div>
+</div>

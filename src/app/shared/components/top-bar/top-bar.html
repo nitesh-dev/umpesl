@@ -1,9 +1,17 @@
-<header class="top">
-    <h2 class="title">{{ title }}</h2>
+<header class="bar">
+    <div class="top-bar">
+        <h2 class="title">{{ title }}</h2>
 
-    <div class="top-actions">
-        <ng-content></ng-content>
-        <!-- <app-button variant="ghost-dark"><app-notifications-icon /> Notifications</app-button>
-            <app-button variant="outline"><app-add-icon /> Add Status</app-button> -->
+        <div class="top-actions">
+            <ng-content></ng-content>
+        </div>
+
     </div>
+    @if(bottomBar){
+    <div class="bottom-bar">
+        <a [routerLink]="'../'"><app-keyboard-arrow-left-icon />Back</a>
+        <ng-content select="[footer]"></ng-content>
+        <hr />
+    </div>
+    }
 </header>

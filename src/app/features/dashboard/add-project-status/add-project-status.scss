@@ -1,0 +1,46 @@
+.project-status {
+  .app-bar-footer {
+    width: 100%;
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        color: var(--Text-Colour-1, #111827);
+        font-size: 16px;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+
+        strong {
+          font-weight: normal;
+        }
+
+        &.box {
+          border-radius: 6px;
+          border: 1px solid var(--Divider, #e5e7eb);
+          padding: 4px 12px;
+        }
+
+        &.date {
+          color: var(--Primary, #0d66ab);
+        }
+
+        &.planner {
+          color: var(--Text-Colour-1, #111827);
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    gap: 32px;
+    margin-top: 32px;
+
+    
+  }
+}

@@ -1,0 +1,26 @@
+.activity {
+  border-radius: 4px;
+  background: var(--White, #fff);
+
+  /* Shadow 2 */
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+  padding: 24px;
+
+  .content{
+    min-height: 80px;
+  }
+
+  h4 {
+    color: var(--Text-Colour-1, #111827);
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  textarea {
+    min-height: 150px;
+    border-radius: 4px;
+    border: 1px solid var(--Divider, #e5e7eb);
+  }
+}

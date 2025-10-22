@@ -1,15 +1,16 @@
 @use '../../../styles' as g;
 .dashboard-layout{
     display: grid;
-    grid-template-columns: min-content 1fr;
+    grid-template-columns: 240px 1fr;
     min-height: 100vh;
+    position: relative;
 
-    :last-child{
+    > :last-child{
         padding: 28px 32px;
         background-color: g.$background-color;
     }
 
-    :first-child{
+    > :first-child{
         position: sticky;
         top: 0;
     }

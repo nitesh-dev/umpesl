@@ -1,0 +1,20 @@
+<div class="card-container">
+    <div class="card">
+        <div class="header">
+            <span>{{title}}</span>
+            <div class="right">
+                <app-button variant="ghost-dark"><app-upload-file-icon />Import</app-button>
+            </div>
+        </div>
+        <div class="content">
+            <ng-content></ng-content>
+        </div>
+
+    </div>
+
+    <div class="buttons">
+        <app-button variant="outline">Save to draft</app-button>
+        <app-button variant="solid">Next</app-button>
+    </div>
+
+</div>

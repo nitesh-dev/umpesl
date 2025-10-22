@@ -19,7 +19,7 @@
       td {
         text-align: left;
         color: var(--Text-Colour-1, #111827);
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 700;
       }
     }
@@ -83,7 +83,7 @@
     }
   }
 
-  &.compact {
+  &.compact-colored {
     thead {
       background-color: #f2f2f2;
       border-top: none;
@@ -99,6 +99,31 @@
         &:nth-child(even) {
           background-color: #f2f2f2;
         }
+      }
+    }
+  }
+
+  &.compact {
+    thead {
+      // background-color: #f2f2f2;
+      border-top: none;
+      tr {
+        height: 50px;
+        border-bottom: 1px solid var(--Divider, #e5e7eb);
+        td {
+          border-right: 1px solid var(--Divider, #e5e7eb);
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        background-color: transparent;
+        border: none;
       }
     }
   }

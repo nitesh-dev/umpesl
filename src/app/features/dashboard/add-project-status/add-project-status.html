@@ -1,0 +1,20 @@
+<div class="project-status">
+    <app-top-bar [bottomBar]="true" title="Add Project Status">
+        <app-button variant="ghost-dark"><app-notifications-icon /> Notifications</app-button>
+        <div class="app-bar-footer" footer>
+            <div class="info">
+                <span class="box">PKG 23 Hoogly</span>
+                <span class="date">Wednesday, 23 Sep, 2025</span>
+                <span class="planner">Planner Name: Supriya Jana, Naresh Goyal</span>
+            </div>
+        </div>
+    </app-top-bar>
+
+
+    <div class="content">
+       <!-- <app-card title="Project Timeline Status"></app-card> -->
+        <app-project-timeline-status/>
+        <app-vertical-nav [items]="items" />
+
+    </div>
+</div>

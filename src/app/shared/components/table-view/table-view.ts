@@ -17,7 +17,7 @@ export interface TableRow {
   styleUrl: './table-view.scss',
 })
 export class TableView {
-  @Input() theme: 'normal' | 'compact' = 'normal';
+  @Input() theme: 'normal' | 'compact' | 'compact-colored' = 'normal';
   @Input() columns: TableColumn[] = [
     { key: 'projectName', label: 'Project name' },
     { key: 'goId', label: 'GO ID' },

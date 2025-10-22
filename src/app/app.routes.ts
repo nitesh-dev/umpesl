@@ -14,6 +14,8 @@ import { DprHistory } from './features/dashboard/dpr-history/dpr-history';
 import { FieldDocuments } from './features/dashboard/field-documents/field-documents';
 import { ProjectMasterSheet } from './features/dashboard/admin/project-master-sheet/project-master-sheet';
 import { UsersManagement } from './features/dashboard/admin/users-management/users-management';
+import { DprReport } from '@features/dashboard/daily-progress-report/dpr-report/dpr-report';
+import { AddProjectStatus } from '@features/dashboard/add-project-status/add-project-status';
 
 export const routes: Routes = [
   {
@@ -31,16 +33,31 @@ export const routes: Routes = [
       },
       { path: 'accounts', component: AccountCentre },
       {
-        path: 'project/:projectId',
-        component: ProjectDashboard,
+        path: 'project',
+        children: [
+          {
+            path: ':projectId',
+            children: [
+              { path: '', component: ProjectDashboard },
+              { path: 'add-status', component: AddProjectStatus },
+            ],
+          },
+          { path: '', redirectTo: '/dashboard/home', pathMatch: 'full' },
+        ],
       },
       {
         path: 'dpr',
-        component: DailyProgressReport,
-      },      {
+        children: [
+          { path: '', component: DailyProgressReport },
+          { path: 'report/:reportId', component: DprReport },
+          { path: 'report', redirectTo: '', pathMatch: 'full' },
+        ],
+      },
+      {
         path: 'dpr-history',
         component: DprHistory,
-      },      {
+      },
+      {
         path: 'field-docs',
         component: FieldDocuments,
       },
@@ -55,11 +72,11 @@ export const routes: Routes = [
       {
         path: 'help',
         children: [
-          {path: 'support', component: SupportTicket},
-          {path: 'guide', component: Guide},
-          {path: 'training', component: TrainingResources},
-        ]
-      }
+          { path: 'support', component: SupportTicket },
+          { path: 'guide', component: Guide },
+          { path: 'training', component: TrainingResources },
+        ],
+      },
     ],
   },
   {
