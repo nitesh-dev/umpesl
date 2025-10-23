@@ -1,5 +1,5 @@
-<div class="project-card">
-    <!-- Header -->
+<a class="project-card" routerLink="/dashboard/project/1">
+    <!-- Header [routerLink]="item.path" -->
     <div class="header">
         <div class="header-info">
             <h3 class="title">{{ project.title }}</h3>
@@ -42,10 +42,10 @@
     <!-- Action Buttons -->
     <div class="buttons">
         <button class="btn">
-            <app-assignment-icon/> DPR
+            <app-assignment-icon /> DPR
         </button>
         <button class="btn">
-            <app-note-stack-icon/> Master Sheet
+            <app-note-stack-icon /> Master Sheet
         </button>
     </div>
 
@@ -56,4 +56,4 @@
         <div>Location: {{ project.location }}</div>
         <div>Project Planner: {{ project.planner }}</div>
     </div>
-</div>
+</a>

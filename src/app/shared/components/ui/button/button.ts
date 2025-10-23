@@ -26,9 +26,9 @@ export class Button {
 
 
   /** Emits click event */
-  @Output() pressed = new EventEmitter<void>();
+  @Output() click = new EventEmitter<void>();
 
   handleClick(): void {
-    if (!this.disabled) this.pressed.emit();
+    if (!this.disabled) this.click.emit();
   }
 }

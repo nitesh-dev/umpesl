@@ -2,7 +2,7 @@
 <div class="project-dashboard">
     <app-top-bar title="Project Dashboard">
         <app-button variant="ghost-dark"><app-notifications-icon /> Notifications</app-button>
-        <app-button variant="outline"><app-add-icon /> Add Status</app-button>
+        <app-button (click)="onAddStatus()" variant="outline"><app-add-icon /> Add Status</app-button>
     </app-top-bar>
     <div class="summery-container">
 
@@ -87,7 +87,7 @@
             <app-procurement-status-chart />
         </app-stat-card>
 
-        <app-stat-card title="Manpower Status">
+        <!-- <app-stat-card title="Manpower Status">
             <app-manpower-status-chart />
         </app-stat-card>
 
@@ -97,7 +97,7 @@
 
         <app-stat-card title="engineering status" [legends]="engineeringStatusLegends">
             <app-engineering-status-chart />
-        </app-stat-card>
+        </app-stat-card> -->
 
     </div>
 </div>

@@ -12,6 +12,7 @@ import { Legend, StatCard } from './components/stat-card/stat-card';
 import { ManpowerStatusChart } from '@shared/components/charts/manpower-status-chart/manpower-status-chart';
 import { CommissionHotoStatusChart } from '@shared/components/charts/commission-hoto-status-chart/commission-hoto-status-chart';
 import { EngineeringStatusChart } from '@shared/components/charts/engineering-status-chart/engineering-status-chart';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-project-dashboard',
@@ -28,11 +29,14 @@ import { EngineeringStatusChart } from '@shared/components/charts/engineering-st
     ManpowerStatusChart,
     CommissionHotoStatusChart,
     EngineeringStatusChart,
+    RouterLink
   ],
   templateUrl: './project-dashboard.html',
   styleUrl: './project-dashboard.scss',
 })
 export class ProjectDashboard {
+
+  constructor(private router: Router, private route: ActivatedRoute) {}
   safety = { closed: 5, open: 0 };
   quality = { closed: 0, open: 5 };
   pendingDPR = 2;
@@ -96,4 +100,11 @@ export class ProjectDashboard {
       label: 'Approved',
     },
   ];
+
+
+
+  onAddStatus(){
+    // alert("hi")
+    this.router.navigate(['add-status'], {relativeTo: this.route})
+  }
 }
