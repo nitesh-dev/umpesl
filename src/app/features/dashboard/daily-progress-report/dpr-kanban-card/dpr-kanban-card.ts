@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 export interface DprCardType {
   title: string;
@@ -13,7 +14,7 @@ export interface DprCardType {
 
 @Component({
   selector: 'app-dpr-kanban-card',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './dpr-kanban-card.html',
   styleUrl: './dpr-kanban-card.scss',
 })
